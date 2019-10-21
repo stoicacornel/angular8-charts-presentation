@@ -2,17 +2,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+import { ContainerComponent } from './components/container/container.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { WrapperComponent } from './components/wrapper/wrapper.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { SideBarButtonComponent } from './components/side-bar-button/side-bar-button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ContainerComponent,
+    FooterComponent,
+    LandingPageComponent,
+    NavBarComponent,
+    SideBarComponent,
+    WrapperComponent,
+    SideBarButtonComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LandingPageComponent]
 })
 export class AppModule { }

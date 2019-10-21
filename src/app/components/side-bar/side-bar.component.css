@@ -1,0 +1,31 @@
+/*TODO: tidy up this file*/
+#sidebar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.sidebar-icon {
+  text-align: center;
+  height: 10%;
+  border: 1px solid var(--main-border-color);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.card-container .card:hover {
+  transform: translateX(20%);
+  color: var(--main-theme-color);
+  box-shadow: 0 5px 18px var(--main-theme-shadow-color);
+}
+
+.card-container .card:hover .material-icons path {
+  fill: var(--main-theme-color);
+}

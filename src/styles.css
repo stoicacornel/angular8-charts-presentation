@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-bg-color: #FFFFFF;
+  --main-border-color: rgba(0, 0, 0, .1);
+  --main-text-color: #606060;
+  --main-theme-color: #FF6F60;
+  --main-theme-bg-color: var(--main-bg-color);
+  --main-theme-shadow-color: rgba(255, 111, 96, 0.4);
+}
+
+.dark-theme {
+  --main-bg-color: #1F1F1F;
+  --main-border-color: rgba(255, 255, 255, .1);
+  --main-text-color: #AAAAAA;
+  --main-theme-color: #FF6F60;
+  --main-theme-bg-color: rgba(255, 255, 255, 0.2);
+  --main-theme-shadow-color: rgba(255, 111, 96, 0.7);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  color: var(--main-text-color) !important;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 0;
+}

@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import sideBarJson from '../../../assets/sideBarJson.json';
+import sideBarJson from '../../../assets/json-data/sideBarJson.json';
 
 @Component({
-  selector: 'app-side-bar',
-  templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.css']
+    selector: 'app-side-bar',
+    templateUrl: './side-bar.component.html',
+    styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
+    sideBarJson: any;
 
-  constructor() {
-    console.log('Reading local json files');
-    console.log(sideBarJson);
-  }
-
+    constructor() {
+        this.sideBarJson = sideBarJson;
+        console.log(sideBarJson);
+    }
 }

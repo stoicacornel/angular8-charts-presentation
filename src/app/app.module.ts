@@ -9,7 +9,6 @@ import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { SideBarButtonComponent } from './components/side-bar-button/side-bar-button.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,6 @@ import { SideBarButtonComponent } from './components/side-bar-button/side-bar-bu
     NavBarComponent,
     SideBarComponent,
     WrapperComponent,
-    SideBarButtonComponent,
   ],
   imports: [
     AppRoutingModule,

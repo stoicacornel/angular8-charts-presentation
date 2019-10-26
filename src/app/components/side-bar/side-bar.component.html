@@ -1,10 +1,11 @@
 <nav id="sidebar">
 	<div class="sidebar-icon">
-		<img src="../../../assets/images/logo.png" alt="" width="75" height="75" />
+		<!--TODO: Rework the CSS for this-->
+		<img src="../../../assets/images/logo.png" alt="" width="30%" height="100%" />
 	</div>
 
 	<div class="card-container">
-		<a *ngFor="let button of sideBarJson" class="card" [href]="button.redirect" >
+		<a *ngFor="let button of sideBarJson" class="card" [routerLink]="button.redirect" >
 			<svg class="material-icons" [attr.width]="button.width" [attr.height]="button.height">
 				<path [attr.d]="button.path"/>
 			</svg>

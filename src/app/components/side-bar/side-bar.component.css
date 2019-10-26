@@ -8,21 +8,20 @@
 
 .sidebar-icon {
 	display: flex;
+	flex: 0 0 7%;
 	align-items: center;
 	justify-content: center;
-	height: 10%;
-	border: 1px solid var(--main-border-color);
+	border: .5px solid var(--main-border-color);
 }
 
 /* Cards list Style */
 
 .card-container {
 	display: flex;
+	flex: 1 1 auto;
 	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	margin-top: 16px;
-	cursor: pointer;
+	padding-top: 16px;
+	border: .5px solid var(--main-border-color);
 }
 
 .card-container .card {

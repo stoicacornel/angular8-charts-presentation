@@ -1,29 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './routes/app-routing.module';
+import { DashboardRoutingModule } from './routes/dashboard-routing.module';
 
-import { ContainerComponent } from './components/container/container.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
-import { WrapperComponent } from './components/wrapper/wrapper.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ChartsComponent } from './components/charts/charts.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RootComponent } from './components/root/root.component';
+import { OverviewComponent } from './components/overview/overview.component';
 
 @NgModule({
   declarations: [
-    ContainerComponent,
+    DashboardComponent,
+    ChartsComponent,
     FooterComponent,
-    LandingPageComponent,
-    NavBarComponent,
+    TopBarComponent,
     SideBarComponent,
-    WrapperComponent,
+    NotFoundComponent,
+    RootComponent,
+    OverviewComponent,
   ],
   imports: [
+    BrowserModule,
+    DashboardRoutingModule,
     AppRoutingModule,
-    BrowserModule
   ],
   providers: [],
-  bootstrap: [LandingPageComponent]
+  bootstrap: [ RootComponent ]
 })
 export class AppModule { }

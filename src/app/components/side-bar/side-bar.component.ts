@@ -11,6 +11,5 @@ export class SideBarComponent {
 
     constructor() {
         this.sideBarJson = sideBarJson;
-        console.log(sideBarJson);
     }
 }

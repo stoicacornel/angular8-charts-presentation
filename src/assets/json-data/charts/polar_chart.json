@@ -1,0 +1,18 @@
+{
+	"type": "polarArea",
+	"legend": true,
+	"entries": [
+		{
+			"label": "Set 1",
+			"data": 1
+		},
+		{
+			"label": "Set 2",
+			"data": 2
+		},
+		{
+			"label": "Set 3",
+			"data": 3
+		}
+	]
+}

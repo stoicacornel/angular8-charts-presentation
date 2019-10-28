@@ -1,0 +1,8 @@
+#polar-chart {
+    margin: 1vh 0;
+}
+
+canvas {
+    width: 38.5vw;
+    height: 30vh;
+}

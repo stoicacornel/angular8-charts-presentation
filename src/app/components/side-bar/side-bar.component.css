@@ -9,9 +9,15 @@
 .sidebar-icon {
 	display: flex;
 	flex: 0 0 7%;
+	max-height: 7%;
 	align-items: center;
 	justify-content: center;
 	border: .5px solid var(--main-border-color);
+}
+
+.sidebar-icon > img {
+	object-fit: cover;
+	height: 100%;
 }
 
 /* Cards list Style */

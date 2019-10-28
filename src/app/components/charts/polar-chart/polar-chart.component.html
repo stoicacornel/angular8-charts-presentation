@@ -1,0 +1,12 @@
+<div id="polar-chart">
+    <canvas baseChart
+            [data]="polarAreaChartData"
+            [labels]="polarAreaChartLabels"
+            [legend]="polarAreaLegend"
+            [colors]="polarAreaColors"
+            [chartType]="polarAreaChartType">
+    </canvas>
+</div>
+<button (click)="randomizeSeries()">Randomize all</button>
+<button (click)="addSet()">Add Set</button>
+<button (click)="removeSet()">Remove Set</button>

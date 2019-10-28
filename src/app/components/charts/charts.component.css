@@ -1,0 +1,12 @@
+#charts {
+    width: 80vw;
+    display: inline-flex;
+    margin: 3vh 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#charts > * {
+    background-color: var(--main-bg-color);
+    margin: 2vh 0;
+}

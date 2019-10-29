@@ -36,8 +36,6 @@ export class PolarChartComponent implements OnInit {
 
     }
 
-    console.log(this.polarAreaColors);
-
     this.randomizeSeries();
   }
 

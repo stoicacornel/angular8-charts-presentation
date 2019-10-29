@@ -1,0 +1,77 @@
+<mat-sidenav-container>
+    <mat-sidenav-content>
+        <form [formGroup]="ourForm" (ngSubmit)="formSubmit()" novalidate>
+
+            <!-- TODO: Get the errors from a json file instead of hard-code it -->
+
+            <!-- Name -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Name" formControlName="name">
+
+                <mat-error *ngIf="errorHandling('name', 'required')">
+                    Name required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Email -->
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" formControlName="email">
+                <!-- TODO: Add proper Email validation -->
+                <mat-error *ngIf="errorHandling('email', 'required')">
+                    Email required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Gender -->
+            <div class="gender-field">
+                <mat-label>Gender:</mat-label>
+                <mat-radio-group aria-label="Select an option" formControlName="gender">
+                    <mat-radio-button value="Male">Male</mat-radio-button>
+                    <mat-radio-button value="Female">Female</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <!-- Date picker -->
+            <mat-form-field>
+                <input matInput readonly [matDatepicker]="datePicker" placeholder="Date of birth" formControlName="dateOfBirth"
+                       (dateChange)="dateChange($event)">
+                <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+                <mat-datepicker #datePicker></mat-datepicker>
+
+                <mat-error *ngIf="errorHandling('dateOfBirth', 'required')">
+                    Date of birth required
+                </mat-error>
+            </mat-form-field>
+
+            <!-- Class -->
+            <mat-form-field>
+                <mat-label>Color</mat-label>
+                <mat-select [(value)]="selected" formControlName="color">
+                    <mat-option [value]="colorArray" *ngFor="let colorArray of ColorArray">
+                        {{colorArray}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <!-- Add Hobby -->
+            <mat-form-field class="multiple-items">
+                <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let hobbiesArray of HobbiesArray" [selectable]="selectable" [removable]="removable"
+                              (removed)="removeHobby(hobbiesArray)">
+                        {{hobbiesArray.name}}
+                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Add hobby" [matChipInputFor]="chipList"
+                           [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                           (matChipInputTokenEnd)="addHobby($event)">
+                </mat-chip-list>
+            </mat-form-field>
+
+            <!-- Submit -->
+            <div class="button-wrapper">
+                <button mat-flat-button color="primary">Submit</button>
+            </div>
+
+        </form>
+    </mat-sidenav-content>
+</mat-sidenav-container>

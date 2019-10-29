@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ChartsComponent } from '../components/charts/charts.component';
 import { DashboardComponent } from '../components/dashboard/dashboard.component';
 import { OverviewComponent } from '../components/overview/overview.component';
+import { ReactiveFormsComponent } from '../components/reactive-forms/reactive-forms.component';
 
 const dashboardRoutes: Routes = [
     {
@@ -22,6 +23,10 @@ const dashboardRoutes: Routes = [
             {
                 path: 'charts',
                 component: ChartsComponent,
+            },
+            {
+                path: 'reactive-forms',
+                component: ReactiveFormsComponent,
             },
             {
                 path: '**',
